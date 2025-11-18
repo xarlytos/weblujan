@@ -2,12 +2,12 @@ import { Clock, Calendar } from 'lucide-react';
 
 export default function Schedule() {
   const schedule = [
-    { day: 'LUNES', morning: '6:00 - 10:00', afternoon: '16:00 - 23:00' },
-    { day: 'MARTES', morning: '6:00 - 10:00', afternoon: '16:00 - 23:00' },
-    { day: 'MIÉRCOLES', morning: '6:00 - 10:00', afternoon: '16:00 - 23:00' },
-    { day: 'JUEVES', morning: '6:00 - 10:00', afternoon: '16:00 - 23:00' },
-    { day: 'VIERNES', morning: '6:00 - 10:00', afternoon: '16:00 - 23:00' },
-    { day: 'SÁBADO', morning: '8:00 - 14:00', afternoon: '16:00 - 21:00' },
+    { day: 'LUNES', morning: '5:00 - 23:00', afternoon: 'Continuo' },
+    { day: 'MARTES', morning: '5:00 - 23:00', afternoon: 'Continuo' },
+    { day: 'MIÉRCOLES', morning: '5:00 - 23:00', afternoon: 'Continuo' },
+    { day: 'JUEVES', morning: '5:00 - 23:00', afternoon: 'Continuo' },
+    { day: 'VIERNES', morning: '5:00 - 23:00', afternoon: 'Continuo' },
+    { day: 'SÁBADO', morning: '9:00 - 14:00', afternoon: 'Cerrado' },
     { day: 'DOMINGO', morning: '9:00 - 14:00', afternoon: 'Cerrado' }
   ];
 
@@ -27,12 +27,6 @@ export default function Schedule() {
           </h2>
           <div className="w-24 h-1 bg-red-700 mx-auto mb-6"></div>
 
-          <div className="flex items-center justify-center gap-3 mb-8">
-            <Clock className="text-red-600" size={24} />
-            <p className="text-xl text-gray-300 font-semibold">
-              Horario de atención: 6:00 - 23:00 hrs
-            </p>
-          </div>
         </div>
 
         <div className="bg-gradient-to-b from-gray-900 to-black border-2 border-red-900/30 overflow-hidden">
@@ -78,7 +72,7 @@ export default function Schedule() {
 
         <div className="mt-8 text-center">
           <p className="text-gray-500 text-sm">
-            Clases dirigidas cada hora. Reserva tu plaza con antelación.
+            Clases dirigidas cada hora. Reserva tu plaza con antelación, también ofrecemos entrenamiento funcional, control de lesiones musculares, sesiones de contracturas y estrés, y open box (entrenamiento libre).
           </p>
         </div>
       </div>
