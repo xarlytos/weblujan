@@ -11,7 +11,7 @@ export default function Hero() {
   return (
     <section id="inicio" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
       <div className="absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-red-950">
-        <div className="absolute inset-0 bg-[url('/Flyer%20Promo%20spartan%20fianl.png')] bg-cover bg-center opacity-30"></div>
+        <div className="absolute inset-0 bg-[url('/hero-background.png')] bg-cover bg-center opacity-30"></div>
         <div className="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-transparent"></div>
       </div>
 
