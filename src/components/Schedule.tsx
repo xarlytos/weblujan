@@ -2,13 +2,13 @@ import { Clock, Calendar } from 'lucide-react';
 
 export default function Schedule() {
   const schedule = [
-    { day: 'LUNES', morning: '5:00 - 23:00', afternoon: 'Continuo' },
-    { day: 'MARTES', morning: '5:00 - 23:00', afternoon: 'Continuo' },
-    { day: 'MIÉRCOLES', morning: '5:00 - 23:00', afternoon: 'Continuo' },
-    { day: 'JUEVES', morning: '5:00 - 23:00', afternoon: 'Continuo' },
-    { day: 'VIERNES', morning: '5:00 - 23:00', afternoon: 'Continuo' },
-    { day: 'SÁBADO', morning: '9:00 - 14:00', afternoon: 'Cerrado' },
-    { day: 'DOMINGO', morning: '9:00 - 14:00', afternoon: 'Cerrado' }
+    { day: 'LUNES', open: '5:00', close: '23:00' },
+    { day: 'MARTES', open: '5:00', close: '23:00' },
+    { day: 'MIÉRCOLES', open: '5:00', close: '23:00' },
+    { day: 'JUEVES', open: '5:00', close: '23:00' },
+    { day: 'VIERNES', open: '5:00', close: '23:00' },
+    { day: 'SÁBADO', open: '9:00', close: '14:00' },
+    { day: 'DOMINGO', open: '9:00', close: '14:00' }
   ];
 
   return (
@@ -37,18 +37,18 @@ export default function Schedule() {
             </div>
             <div className="py-4 border-r border-red-800 flex items-center justify-center gap-2">
               <Clock size={20} />
-              <span>MAÑANA</span>
+              <span>APERTURA</span>
             </div>
             <div className="py-4 flex items-center justify-center gap-2">
               <Clock size={20} />
-              <span>TARDE</span>
+              <span>CIERRE</span>
             </div>
           </div>
 
           {schedule.map((item, index) => (
             <div
               key={index}
-              className={`grid md:grid-cols-3 gap-4 md:gap-0 p-6 md:p-0 ${
+              className={`grid md:grid-cols-3 gap-4 md:gap-0 p-6 md:p-0 text-center ${
                 index !== schedule.length - 1 ? 'border-b border-red-900/30' : ''
               } hover:bg-red-950/20 transition-colors`}
             >
@@ -57,13 +57,13 @@ export default function Schedule() {
                 <p className="text-white font-black text-lg">{item.day}</p>
               </div>
               <div className="md:py-6 md:px-8 md:border-r md:border-red-900/30">
-                <span className="md:hidden text-red-500 font-bold text-sm mb-2 block">MAÑANA</span>
-                <p className="text-gray-300 font-semibold">{item.morning}</p>
+                <span className="md:hidden text-red-500 font-bold text-sm mb-2 block">APERTURA</span>
+                <p className="text-gray-300 font-semibold">{item.open}</p>
               </div>
               <div className="md:py-6 md:px-8">
-                <span className="md:hidden text-red-500 font-bold text-sm mb-2 block">TARDE</span>
-                <p className={`font-semibold ${item.afternoon === 'Cerrado' ? 'text-gray-600' : 'text-gray-300'}`}>
-                  {item.afternoon}
+                <span className="md:hidden text-red-500 font-bold text-sm mb-2 block">CIERRE</span>
+                <p className="text-gray-300 font-semibold">
+                  {item.close}
                 </p>
               </div>
             </div>
