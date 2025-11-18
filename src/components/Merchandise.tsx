@@ -24,7 +24,7 @@ export default function Merchandise() {
             <div className="absolute -inset-4 bg-gradient-to-r from-red-700/20 to-red-900/20 blur-xl group-hover:blur-2xl transition-all"></div>
             <div className="relative bg-gradient-to-br from-gray-900 to-black border-2 border-red-900/30 p-8 group-hover:border-red-700 transition-all">
               <img
-                src="/Camiseta%20spartan.png"
+                src="/Black%20and%20White%20Minimalist%20T-Shirt%20Mockup%20Instagram%20Post%20(1).png"
                 alt="Camiseta Spartan Crossfit"
                 className="w-full transform group-hover:scale-105 transition-transform duration-500"
               />
